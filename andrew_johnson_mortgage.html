@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andrew Johnson — Mortgage Advisor</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'aj-green': '#1a3c34',
+            'aj-gold': '#a68556',
+            'aj-gold-hover': '#8f7044',
+            'aj-beige': '#f9f7f2', /* Lighter beige from new ref */
+            'aj-text': '#2d2d2d',
+          },
+          fontFamily: {
+            serif: ['"DM Serif Display"', 'serif'],
+            sans: ['"Lato"', 'sans-serif'],
+          },
+          backgroundImage: {
+            'hero-pattern': "url('https://www.transparenttextures.com/patterns/cream-paper.png')",
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      color: #2d2d2d;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'DM Serif Display', serif;
+    }
+
+    .wave-separator {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+    }
+
+    .badge-shadow {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Animations */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease-out;
+    }
+
+    .reveal-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .typewriter-on-scroll {
+      border-right: 2px solid transparent;
+      width: fit-content;
+    }
+
+    .typewriter-cursor {
+      border-right: 2px solid #a68556;
+      animation: blink 0.75s step-end infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        border-color: transparent;
+      }
+
+      50% {
+        border-color: #a68556;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-aj-beige">
+  <!-- Top Nav -->
+  <header class="bg-aj-green text-white py-4 px-6 fixed w-full top-0 z-50 shadow-lg">
+    <div class="mx-auto max-w-7xl flex items-center justify-between">
+      <!-- Logo Area -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div
+          class="relative flex items-center justify-center w-10 h-10 rounded-full border border-aj-gold bg-transparent">
+          <span class="font-serif text-aj-gold text-lg">AJ</span>
+        </div>
+        <div class="leading-none">
+          <div class="font-serif text-lg tracking-wide text-white uppercase">ANDREW JOHNSON</div>
+          <div class="h-[1px] w-12 bg-aj-gold mt-1"></div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-white/90">
+        <a href="#home" class="hover:text-aj-gold transition-colors">Home</a>
+        <a href="#options" class="hover:text-aj-gold transition-colors">Loan Options</a>
+        <a href="#about" class="hover:text-aj-gold transition-colors">About</a>
+        <a href="#contact" class="hover:text-aj-gold transition-colors">Contact</a>
+        <a href="#contact"
+          class="inline-flex items-center justify-center rounded-sm bg-[#5a7c56] px-6 py-2 text-xs font-bold uppercase tracking-wider text-white hover:bg-[#4b6948] transition">
+          Contact
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main id="home" class="pt-20">
+    <section class="relative bg-aj-beige min-h-[85vh] flex items-center overflow-hidden">
+      <!-- Background Texture -->
+      <div class="absolute inset-0 opacity-40 mix-blend-multiply"
+        style="background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');"></div>
+
+      <div class="relative mx-auto max-w-7xl px-4 py-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+        <!-- Left Content (Text + Form) -->
+        <div class="lg:col-span-5 z-20">
+          <h1 class="text-4xl md:text-5xl text-aj-text leading-tight mb-2 typewriter-on-scroll">
+            Get Expert Mortgage Guidance <br />
+            with Andrew Johnson
+          </h1>
+          <p class="mt-2 text-sm md:text-base text-gray-600 font-medium mb-8">
+            Senior Loan Officer - Serving Professional Home Buyers
+          </p>
+
+          <!-- Form Card -->
+          <div
+            class="bg-[#f9f4ec] p-6 lg:p-8 rounded-xl shadow-xl border border-aj-gold/30 relative max-w-md reveal-on-scroll">
+            <h3 class="text-xl font-serif text-aj-text mb-4">Instantly See if You Qualify</h3>
+
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-start gap-2 text-xs font-semibold text-gray-700">
+                <span class="text-[#5a7c56] font-bold">✓</span>
+                See Rates Without a Credit Check
+              </li>
+              <li class="flex items-start gap-2 text-xs font-semibold text-gray-700">
+                <span class="text-[#5a7c56] font-bold">✓</span>
+                Takes Under 60 Seconds
+              </li>
+              <li class="flex items-start gap-2 text-xs font-semibold text-gray-700">
+                <span class="text-[#5a7c56] font-bold">✓</span>
+                Your Info is Safe &amp; Secure
+              </li>
+            </ul>
+
+            <form class="space-y-3" onsubmit="return false;">
+              <input
+                class="w-full bg-white border border-stone-200 rounded px-3 py-2 text-sm text-gray-700 placeholder-gray-400 focus:border-aj-gold focus:outline-none transition-colors"
+                placeholder="First Name" />
+              <input
+                class="w-full bg-white border border-stone-200 rounded px-3 py-2 text-sm text-gray-700 placeholder-gray-400 focus:border-aj-gold focus:outline-none transition-colors"
+                placeholder="Last Name" />
+              <input
+                class="w-full bg-white border border-stone-200 rounded px-3 py-2 text-sm text-gray-700 placeholder-gray-400 focus:border-aj-gold focus:outline-none transition-colors"
+                placeholder="Phone Number" />
+              <input
+                class="w-full bg-white border border-stone-200 rounded px-3 py-2 text-sm text-gray-700 placeholder-gray-400 focus:border-aj-gold focus:outline-none transition-colors"
+                placeholder="Email Address" />
+
+              <button type="submit"
+                class="w-full mt-2 bg-aj-gold hover:bg-aj-gold-hover text-white font-bold py-3 rounded shadow-md transition-all text-sm flex items-center justify-center gap-2 group">
+                See My Loan Options
+                <span class="text-lg">›</span>
+              </button>
+              <p class="text-[9px] text-center text-gray-400 mt-2 text-balance">*No credit check required. For
+                illustration purposes.</p>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right Image -->
+        <div
+          class="lg:col-span-7 h-full relative min-h-[400px] lg:min-h-[600px] flex items-end justify-center lg:justify-end z-10 reveal-on-scroll">
+          <!-- Deep Green Background Shape behind image -->
+          <div class="absolute right-[-20%] bottom-0 w-[140%] h-[70%] bg-[#1a3c34] rounded-tl-[100%] z-0"></div>
+
+          <!-- Man Image -->
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop"
+            alt="Andrew Johnson" class="relative z-10 w-full max-w-lg object-contain drop-shadow-2xl translate-y-8" />
+        </div>
+      </div>
+
+      <!-- Wave Divider connecting Hero to About -->
+      <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20" style="bottom: -1px;">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"
+          class="relative block w-[calc(100%+1.3px)] h-[60px] md:h-[100px] fill-aj-beige">
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            class="fill-aj-beige"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="relative bg-aj-beige py-20 lg:py-24">
+      <div class="mx-auto max-w-6xl px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Left Text Content -->
+        <div class="order-1 reveal-on-scroll">
+          <h2 class="text-4xl text-aj-text mb-2 typewriter-on-scroll">About Andrew Johnson</h2>
+          <p class="text-lg font-bold text-gray-800 mb-6">Trusted Mortgage Advisor</p>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Hi, I’m <span class="font-bold text-gray-800">Andrew Johnson</span>, a Senior Loan Officer with over 15
+            years of experience helping residents achieve their dream of homeownership. As a dedicated professional, I
+            specialize in personalized mortgage solutions to fit your unique needs.
+          </p>
+          <div class="text-xs font-bold text-gray-500 tracking-wider uppercase">
+            NMLS #123456
+          </div>
+        </div>
+
+        <!-- Right Image with Badges -->
+        <div class="relative order-2 flex justify-center lg:justify-end reveal-on-scroll">
+          <!-- Circular background elements -->
+          <div
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-aj-gold/20 rounded-full z-0">
+          </div>
+          <div
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] border border-aj-gold/40 rounded-full z-0">
+          </div>
+
+          <!-- Main Portrait -->
+          <div class="relative z-10 w-80 h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
+              class="w-full h-full object-cover" alt="About Andrew" />
+          </div>
+
+          <!-- Floating Badges -->
+          <div
+            class="absolute top-10 -left-4 z-20 bg-[#a68556] text-white px-4 py-3 rounded-r-full rounded-bl-full shadow-lg flex items-center gap-3 w-48 badge-shadow">
+            <div class="text-2xl font-bold font-serif">15+</div>
+            <div class="text-[10px] leading-tight font-medium upercase">Years of<br>Experience</div>
+            <div class="absolute -right-1 top-1/2 -translate-y-1/2 w-2 h-2 bg-[#a68556] rotate-45"></div>
+          </div>
+
+          <div
+            class="absolute top-36 -left-12 z-20 bg-[#bea275] text-white px-5 py-3 rounded-full shadow-lg flex items-center gap-3 w-56 badge-shadow">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            <div class="text-[11px] leading-tight font-bold">Personalized<br>Loan Solutions</div>
+          </div>
+
+          <div
+            class="absolute bottom-10 -left-4 z-20 bg-[#a68556] text-white px-4 py-3 rounded-r-full rounded-tl-full shadow-lg flex items-center gap-3 w-48 badge-shadow">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+              </path>
+            </svg>
+            <div class="text-[11px] leading-tight font-bold">Fast &amp; Easy<br>Process</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GREEN BOTTOM CTA -->
+    <section class="bg-[#1a3c34] py-20 text-white relative overflow-hidden">
+      <!-- Top Curve connecting About to Footer -->
+      <div class="absolute top-0 left-0 w-full overflow-hidden leading-none z-10" style="top: -1px;">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"
+          class="relative block w-[calc(100%+1.3px)] h-[60px] md:h-[100px] fill-aj-beige">
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="fill-aj-beige"></path>
+        </svg>
+      </div>
+
+      <div class="mx-auto max-w-5xl px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-20 mt-10">
+        <!-- Left Info -->
+        <div class="text-left reveal-on-scroll">
+          <h2 class="text-4xl font-serif mb-4 text-white typewriter-on-scroll">Ready to Get Started? Let's Chat!</h2>
+          <p class="text-white/80 mb-8 font-light text-sm">
+            Book a free consultation or call/text Andrew directly to discuss your mortgage needs.
+          </p>
+
+          <!-- Checkmarks Box -->
+          <div class="bg-[#1f463d] p-6 rounded-lg border border-white/10 mb-8 max-w-md">
+            <div class="space-y-3 text-sm font-medium text-white">
+              <div class="flex items-center gap-3">
+                <div class="w-5 h-5 rounded-full bg-[#5a7c56] flex items-center justify-center text-[10px] text-white">✓
+                </div>
+                Quick &amp; Easy Pre-Approval Process
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-5 h-5 rounded-full bg-[#5a7c56] flex items-center justify-center text-[10px] text-white">✓
+                </div>
+                Competitive Rates &amp; Programs
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-5 h-5 rounded-full bg-[#5a7c56] flex items-center justify-center text-[10px] text-white">✓
+                </div>
+                No Obligation, Just Friendly Expert Advice
+              </div>
+            </div>
+          </div>
+
+          <div class="text-left">
+            <p class="text-lg font-serif italic text-white mb-1">Call or Text Andrew at:</p>
+            <p class="text-4xl font-bold mb-6 tracking-wide text-white">(310) 555-0190</p>
+
+            <button
+              class="bg-aj-gold hover:bg-aj-gold-hover text-white font-bold py-3 px-6 rounded shadow-lg transition-all text-sm flex items-center gap-2">
+              Schedule Your Free Consultation <span class="text-lg">›</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Image Card (Square Portrait) -->
+        <div class="flex justify-center md:justify-end reveal-on-scroll">
+          <div class="relative w-64 h-64 md:w-80 md:h-80">
+            <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1000&auto=format&fit=crop"
+              class="w-full h-full object-cover rounded-lg shadow-2xl border-4 border-white/10" alt="Andrew Portrait" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Bottom -->
+    <footer class="bg-[#15302a] py-6 text-center border-t border-white/10">
+      <div class="text-[10px] text-white/40 uppercase tracking-widest">
+        &copy; <span id="year"></span> Andrew Johnson. All rights reserved. | NMLS # 123456
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Scroll Animations
+    document.addEventListener("DOMContentLoaded", function () {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible");
+            if (entry.target.classList.contains("typewriter-on-scroll") && !entry.target.dataset.typed) {
+              typeWriter(entry.target);
+            }
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.reveal-on-scroll, .typewriter-on-scroll').forEach(el => observer.observe(el));
+
+      // Prepare Typewriter Elements
+      document.querySelectorAll('.typewriter-on-scroll').forEach(el => {
+        const originalText = el.innerText.trim().replace(/\s+/g, ' '); // Clean text
+        el.dataset.text = originalText;
+        // We keep height by inserting a non-breaking space
+        el.innerHTML = "&nbsp;";
+        el.style.opacity = "1"; // Ensure it is visible for cursor
+      });
+
+      function typeWriter(el) {
+        const text = el.dataset.text;
+        el.dataset.typed = "true";
+        el.innerText = "";
+        el.classList.add("typewriter-cursor");
+
+        let i = 0;
+        function type() {
+          if (i < text.length) {
+            el.textContent += text.charAt(i);
+            i++;
+            setTimeout(type, 40); // Typing speed
+          } else {
+            el.classList.remove("typewriter-cursor");
+          }
+        }
+        type();
+      }
+    });
+  </script>
+</body>
+
+</html>
